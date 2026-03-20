@@ -1,0 +1,6 @@
+.idea
+.venv
+venv/
+data/animals10/
+
+draft.ipynb

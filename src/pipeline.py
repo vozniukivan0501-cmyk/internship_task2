@@ -7,8 +7,8 @@ tf.get_logger().setLevel('ERROR')
 from transformers import utils
 utils.logging.set_verbosity_error()
 
-from inference_cv import CVInference
-from inference_ner import NERInference
+from src.inference_cv import CVInference
+from src.inference_ner import NERInference
 import argparse
 from pathlib import Path
 

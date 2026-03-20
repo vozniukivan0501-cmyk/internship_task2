@@ -8,29 +8,29 @@ Repository also contains trained MobileNetV2-based model.
 ## Model and Dataset setup
 * DestilledBert-based model is too big to upload on GitHub, same as animals dataset.
 * How to load necessary data and train DestilledBert-based model:
-  1) Download dataset from: https://www.kaggle.com/datasets/alessiocorrado99/animals10
-  2) Unpack all directories from 'raw-img' into data/animals10
-  3) Run translator.py with: python src/translator.py
-  4) Run train_ner.py with: python src/train_ner.py (recommended args are set by default, but can be changed)
-  5) Wait until model save
+  1. Download dataset from: https://www.kaggle.com/datasets/alessiocorrado99/animals10
+  2. Unpack all directories from 'raw-img' into data/animals10
+  3. Run translator.py with: python src/translator.py
+  4. Run train_ner.py with: python src/train_ner.py (recommended args are set by default, but can be changed)
+  5. Wait until model save
  
 ## Project Structure
-base dir/
+base dir/:
 
-  data/
+  data/:
     1) animals10 / <10 dirs with images> - should be uploaded by user, contains dataset for train CV model
     2) ner_data / ner_dataset.json - dataset with generated text conversation for NER model
     
-  models/
+  models/:
     1) ner_checkpoints - temp files for NER model, setting up automatically after NER model training
     2) ner_model - dir contains saved NER model, setting up automatically after NER model training
     3) cv_model.keras - saved and trained MobileNetV2-based CV model
     
-  notebooks/ 
+  notebooks/:
     1) EDA.ipynb - contains notebook with EDA visualization and conclusions about animals10 dataset
     2) DEMO.ipynb - contains demonstration of pipeline performance and edge cases descriptions
 
-  src/
+  src/:
     1)cv_model_module.py - initialize CV model class
     2)ner_model_module.py - initialize NER model class
     3)train_cv.py - file with parametrized training script for train and save CV model
